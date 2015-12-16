@@ -1,0 +1,388 @@
+发送评论成功,您发表的评论可能会延时显示,这是因为服务器缓存所造成的,请见谅.
+<div style="display:none;">
+  <img src=http://js.tongji.yahoo.com.cn/0/292/115/ystat.gif>
+</div>
+<div class="alignleft" style="font-size: 83%; color: gray; width: 288px; line-height: 120%;">从好的方面看，经历过这么多的骗局之后，我们是当之无愧的丛林生存高手。新年新气象，现在，一个陌生的</div>
+
+function eventOnResize() {
+    function calcPostAbstractWidth() {
+        $(".post-header").each(function (index, domElement) {
+            var id = getNumFromTail(domElement.id);
+            var ps = $('.post-abstract', domElement);
+            if(ps.css('display')=='none') {
+                ty.del('mainContentWidth');
+                //alert("calcPostAbstractWidth no need");
+                return false;
+            }
+            var metadata = $('.metadata', domElement);
+            ps.css('width', '0px');
+            //var psWidth = metadata.offset().left - ps.offset().left - 6;
+            var psWidth = metadata.get(0).offsetLeft - ps.get(0).offsetLeft - 6;
+            ps.css('width', psWidth + 'px');
+            //alert("calcPostAbstractWidth OK");
+        });
+    }
+    var lastMainContentWidth = ty.get('mainContentWidth');
+    var thisMainContentWidth = $('#mainContent').width();
+    //alert("calcPostAbstractWidth");
+    if (lastMainContentWidth == undefined ||
+        lastMainContentWidth!=thisMainContentWidth) {
+        ty.set('mainContentWidth', thisMainContentWidth);
+        //alert("calcPostAbstractWidth begin");
+        calcPostAbstractWidth();
+    }
+}
+由于您是第一次评论或者您的评论内容中有智商低于70的内容，需要管理员的验证才会被显示。
+<?php $comments_count = ty_get_comments_count();if(!is_single() && $comments_count > 0) { ?><span class="comments-count" title="<?php echo $comments_count; ?>条评论"><?php echo $comments_count; ?></span><?php } ?>
+
+
+function var2Json($v) {
+    if(is_string($v)) {
+        return '"'.addslashes($v).'"';
+    } else {
+        return $v;
+    }
+}
+function map2Json(& $a) {
+    $json_str ="{";
+    $temp = array();
+    foreach($a as $key => $value) {
+        $temp[] = sprintf("\"%s\" : %s", $key, var2Json($value));
+    }
+    $json_str .= implode(",", $temp);
+    $json_str .="}";
+    return addslashes($json_str);
+}
+
+<script language="javascript">
+$(function() {
+    j = '<li class="even" id="comment-39">\nyes\n</li>';
+    $(".commentlist").append(j);
+});
+</script>
+
+<script language="javascript">
+$(function() {
+    function json_decode(jsonstr) {
+      data = eval('('+jsonstr+')');
+      return data;
+    }
+    j = "<?php
+    <li class="even" id="comment-39">
+
+      <small class="commentmetadata"># 39</small>
+
+      <cite><a href='http://net2e.com' rel='external nofollow'>lot</a></cite> :
+
+      <small class="commentmetadata">
+
+        发表于 <a href="#comment-39" title="">2008-01-04 08:37:28</a>
+
+        &nbsp;&nbsp;<a href="http://localhost/blog/wp-admin/comment.php?action=editcomment&amp;c=39"
+
+ title="编辑评论">edit</a>              </small>
+
+      <p>你哦好！<a href="fff" rel="nofollow">link</a><br />
+
+飞íèěǐéēìla &#8221; &#8216; ~!@$@%@%^^<br />
+
+735<br />
+
+fdasfgas</p>
+
+<p>gadfgatff</p>
+
+      <a class="comment-reply-link btn rb" href="#" id="comment-reply-link-39"><b class="rb-blue-s">
+
+<b>回复</b></b></a>
+
+        </li>
+
+?>";
+    oj = json_decode(j);
+    $(".commentlist").append(oj.content);
+});
+</script>
+      <small class="commentmetadata alignright"><a href="#comment-<?php comment_ID() ?>" title=""><?php comment_date('Y-n-d') ?> <?php comment_time() ?></a> <?php edit_comment_link('edit','&nbsp;&nbsp;',''); ?></small>
+
+
+<ul class="commentlist">
+  <li>
+    <cite><a rel="external nofollow" href="http://net2e.com">lot</a></cite> 说:
+      <small class="commentmetadata"><a title="" href="#comment-22">12月 30th, 2007 at 4:49 pm</a>   <a title="编辑评论" href="http://localhost/blog/wp-admin/comment.php?action=editcomment&c=22">edit</a></small>
+    <p>评论测试。加油！加油！</p>
+    <a href="#" class="place-cf-under-this">回复此评论-10</a>
+    <ul class="commentlist">
+      <li>
+        <cite><a rel="external nofollow" href="http://net2e.com">lot</a></cite> 说:
+          <small class="commentmetadata"><a title="" href="#comment-22">12月 30th, 2007 at 4:49 pm</a>   <a title="编辑评论" href="http://localhost/blog/wp-admin/comment.php?action=editcomment&c=22">edit</a></small>
+        <p>评论测试。加油！加油！</p>
+        <a href="#" class="place-cf-under-this">回复此评论-10</a>
+        <ul class="commentlist">
+          <li>
+            <cite><a rel="external nofollow" href="http://net2e.com">lot</a></cite> 说:
+              <small class="commentmetadata"><a title="" href="#comment-22">12月 30th, 2007 at 4:49 pm</a>   <a title="编辑评论" href="http://localhost/blog/wp-admin/comment.php?action=editcomment&c=22">edit</a></small>
+            <p>评论测试。加油！加油！</p>
+            <a href="#" class="place-cf-under-this">回复此评论-10</a>
+            <ul class="commentlist">
+              <li>
+                <cite><a rel="external nofollow" href="http://net2e.com">lot</a></cite> 说:
+                  <small class="commentmetadata"><a title="" href="#comment-22">12月 30th, 2007 at 4:49 pm</a>   <a title="编辑评论" href="http://localhost/blog/wp-admin/comment.php?action=editcomment&c=22">edit</a></small>
+                <p>评论测试。加油！加油！</p>
+                <a href="#" class="place-cf-under-this">回复此评论-10</a>
+                <ul class="commentlist">
+                  <li>
+                    <cite><a rel="external nofollow" href="http://net2e.com">lot</a></cite> 说:
+                      <small class="commentmetadata"><a title="" href="#comment-22">12月 30th, 2007 at 4:49 pm</a>   <a title="编辑评论" href="http://localhost/blog/wp-admin/comment.php?action=editcomment&c=22">edit</a></small>
+                    <p>评论测试。加油！加油！</p>
+                    <a href="#" class="place-cf-under-this">回复此评论-10</a>
+<ul class="commentlist">
+  <li>
+    <cite><a rel="external nofollow" href="http://net2e.com">lot</a></cite> 说:
+      <small class="commentmetadata"><a title="" href="#comment-22">12月 30th, 2007 at 4:49 pm</a>   <a title="编辑评论" href="http://localhost/blog/wp-admin/comment.php?action=editcomment&c=22">edit</a></small>
+    <p>评论测试。加油！加油！</p>
+    <a href="#" class="place-cf-under-this">回复此评论-10</a>
+    <ul class="commentlist">
+      <li>
+        <cite><a rel="external nofollow" href="http://net2e.com">lot</a></cite> 说:
+          <small class="commentmetadata"><a title="" href="#comment-22">12月 30th, 2007 at 4:49 pm</a>   <a title="编辑评论" href="http://localhost/blog/wp-admin/comment.php?action=editcomment&c=22">edit</a></small>
+        <p>评论测试。加油！加油！</p>
+        <a href="#" class="place-cf-under-this">回复此评论-10</a>
+        <ul class="commentlist">
+          <li>
+            <cite><a rel="external nofollow" href="http://net2e.com">lot</a></cite> 说:
+              <small class="commentmetadata"><a title="" href="#comment-22">12月 30th, 2007 at 4:49 pm</a>   <a title="编辑评论" href="http://localhost/blog/wp-admin/comment.php?action=editcomment&c=22">edit</a></small>
+            <p>评论测试。加油！加油！</p>
+            <a href="#" class="place-cf-under-this">回复此评论-10</a>
+            <ul class="commentlist">
+              <li>
+                <cite><a rel="external nofollow" href="http://net2e.com">lot</a></cite> 说:
+                  <small class="commentmetadata"><a title="" href="#comment-22">12月 30th, 2007 at 4:49 pm</a>   <a title="编辑评论" href="http://localhost/blog/wp-admin/comment.php?action=editcomment&c=22">edit</a></small>
+                <p>评论测试。加油！加油！</p>
+                <a href="#" class="place-cf-under-this">回复此评论-10</a>
+                <ul class="commentlist">
+                  <li>
+                    <cite><a rel="external nofollow" href="http://net2e.com">lot</a></cite> 说:
+                      <small class="commentmetadata"><a title="" href="#comment-22">12月 30th, 2007 at 4:49 pm</a>   <a title="编辑评论" href="http://localhost/blog/wp-admin/comment.php?action=editcomment&c=22">edit</a></small>
+                    <p>评论测试。加油！加油！</p>
+                    <a href="#" class="place-cf-under-this">回复此评论-10</a>
+<ul class="commentlist">
+  <li>
+    <cite><a rel="external nofollow" href="http://net2e.com">lot</a></cite> 说:
+      <small class="commentmetadata"><a title="" href="#comment-22">12月 30th, 2007 at 4:49 pm</a>   <a title="编辑评论" href="http://localhost/blog/wp-admin/comment.php?action=editcomment&c=22">edit</a></small>
+    <p>评论测试。加油！加油！</p>
+    <a href="#" class="place-cf-under-this">回复此评论-10</a>
+    <ul class="commentlist">
+      <li>
+        <cite><a rel="external nofollow" href="http://net2e.com">lot</a></cite> 说:
+          <small class="commentmetadata"><a title="" href="#comment-22">12月 30th, 2007 at 4:49 pm</a>   <a title="编辑评论" href="http://localhost/blog/wp-admin/comment.php?action=editcomment&c=22">edit</a></small>
+        <p>评论测试。加油！加油！</p>
+        <a href="#" class="place-cf-under-this">回复此评论-10</a>
+        <ul class="commentlist">
+          <li>
+            <cite><a rel="external nofollow" href="http://net2e.com">lot</a></cite> 说:
+              <small class="commentmetadata"><a title="" href="#comment-22">12月 30th, 2007 at 4:49 pm</a>   <a title="编辑评论" href="http://localhost/blog/wp-admin/comment.php?action=editcomment&c=22">edit</a></small>
+            <p>评论测试。加油！加油！</p>
+            <a href="#" class="place-cf-under-this">回复此评论-10</a>
+            <ul class="commentlist">
+              <li>
+                <cite><a rel="external nofollow" href="http://net2e.com">lot</a></cite> 说:
+                  <small class="commentmetadata"><a title="" href="#comment-22">12月 30th, 2007 at 4:49 pm</a>   <a title="编辑评论" href="http://localhost/blog/wp-admin/comment.php?action=editcomment&c=22">edit</a></small>
+                <p>评论测试。加油！加油！</p>
+                <a href="#" class="place-cf-under-this">回复此评论-10</a>
+                <ul class="commentlist">
+                  <li>
+                    <cite><a rel="external nofollow" href="http://net2e.com">lot</a></cite> 说:
+                      <small class="commentmetadata"><a title="" href="#comment-22">12月 30th, 2007 at 4:49 pm</a>   <a title="编辑评论" href="http://localhost/blog/wp-admin/comment.php?action=editcomment&c=22">edit</a></small>
+                    <p>评论测试。加油！加油！</p>
+                    <a href="#" class="place-cf-under-this">回复此评论-10</a>
+<ul class="commentlist">
+  <li>
+    <cite><a rel="external nofollow" href="http://net2e.com">lot</a></cite> 说:
+      <small class="commentmetadata"><a title="" href="#comment-22">12月 30th, 2007 at 4:49 pm</a>   <a title="编辑评论" href="http://localhost/blog/wp-admin/comment.php?action=editcomment&c=22">edit</a></small>
+    <p>评论测试。加油！加油！</p>
+    <a href="#" class="place-cf-under-this">回复此评论-10</a>
+    <ul class="commentlist">
+      <li>
+        <cite><a rel="external nofollow" href="http://net2e.com">lot</a></cite> 说:
+          <small class="commentmetadata"><a title="" href="#comment-22">12月 30th, 2007 at 4:49 pm</a>   <a title="编辑评论" href="http://localhost/blog/wp-admin/comment.php?action=editcomment&c=22">edit</a></small>
+        <p>评论测试。加油！加油！</p>
+        <a href="#" class="place-cf-under-this">回复此评论-10</a>
+        <ul class="commentlist">
+          <li>
+            <cite><a rel="external nofollow" href="http://net2e.com">lot</a></cite> 说:
+              <small class="commentmetadata"><a title="" href="#comment-22">12月 30th, 2007 at 4:49 pm</a>   <a title="编辑评论" href="http://localhost/blog/wp-admin/comment.php?action=editcomment&c=22">edit</a></small>
+            <p>评论测试。加油！加油！</p>
+            <a href="#" class="place-cf-under-this">回复此评论-10</a>
+            <ul class="commentlist">
+              <li>
+                <cite><a rel="external nofollow" href="http://net2e.com">lot</a></cite> 说:
+                  <small class="commentmetadata"><a title="" href="#comment-22">12月 30th, 2007 at 4:49 pm</a>   <a title="编辑评论" href="http://localhost/blog/wp-admin/comment.php?action=editcomment&c=22">edit</a></small>
+                <p>评论测试。加油！加油！</p>
+                <a href="#" class="place-cf-under-this">回复此评论-10</a>
+                <ul class="commentlist">
+                  <li>
+                    <cite><a rel="external nofollow" href="http://net2e.com">lot</a></cite> 说:
+                      <small class="commentmetadata"><a title="" href="#comment-22">12月 30th, 2007 at 4:49 pm</a>   <a title="编辑评论" href="http://localhost/blog/wp-admin/comment.php?action=editcomment&c=22">edit</a></small>
+                    <p>评论测试。加油！加油！</p>
+                    <a href="#" class="place-cf-under-this">回复此评论-10</a>
+                  </li>
+                  <li>
+                    <cite><a rel="external nofollow" href="http://net2e.com">lot</a></cite> 说:
+                      <small class="commentmetadata"><a title="" href="#comment-22">12月 30th, 2007 at 4:49 pm</a>   <a title="编辑评论" href="http://localhost/blog/wp-admin/comment.php?action=editcomment&c=22">edit</a></small>
+                    <p>评论测试。加油！加油！</p>
+                    <a href="#" class="place-cf-under-this">回复此评论-10</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+                  <li>
+                    <cite><a rel="external nofollow" href="http://net2e.com">lot</a></cite> 说:
+                      <small class="commentmetadata"><a title="" href="#comment-22">12月 30th, 2007 at 4:49 pm</a>   <a title="编辑评论" href="http://localhost/blog/wp-admin/comment.php?action=editcomment&c=22">edit</a></small>
+                    <p>评论测试。加油！加油！</p>
+                    <a href="#" class="place-cf-under-this">回复此评论-10</a>
+                  </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+                  </li>
+                  <li>
+                    <cite><a rel="external nofollow" href="http://net2e.com">lot</a></cite> 说:
+                      <small class="commentmetadata"><a title="" href="#comment-22">12月 30th, 2007 at 4:49 pm</a>   <a title="编辑评论" href="http://localhost/blog/wp-admin/comment.php?action=editcomment&c=22">edit</a></small>
+                    <p>评论测试。加油！加油！</p>
+                    <a href="#" class="place-cf-under-this">回复此评论-10</a>
+                  </li>
+                      <li>
+                    <cite><a rel="external nofollow" href="http://net2e.com">lot</a></cite> 说:
+                      <small class="commentmetadata"><a title="" href="#comment-22">12月 30th, 2007 at 4:49 pm</a>   <a title="编辑评论" href="http://localhost/blog/wp-admin/comment.php?action=editcomment&c=22">edit</a></small>
+                    <p>评论测试。加油！加油！</p>
+                    <a href="#" class="place-cf-under-this">回复此评论-10</a>
+                  </li>
+                </ul>
+              </li>
+                  <li>
+                    <cite><a rel="external nofollow" href="http://net2e.com">lot</a></cite> 说:
+                      <small class="commentmetadata"><a title="" href="#comment-22">12月 30th, 2007 at 4:49 pm</a>   <a title="编辑评论" href="http://localhost/blog/wp-admin/comment.php?action=editcomment&c=22">edit</a></small>
+                    <p>评论测试。加油！加油！</p>
+                    <a href="#" class="place-cf-under-this">回复此评论-10</a>
+                  </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+                      <li>
+                    <cite><a rel="external nofollow" href="http://net2e.com">lot</a></cite> 说:
+                      <small class="commentmetadata"><a title="" href="#comment-22">12月 30th, 2007 at 4:49 pm</a>   <a title="编辑评论" href="http://localhost/blog/wp-admin/comment.php?action=editcomment&c=22">edit</a></small>
+                    <p>评论测试。加油！加油！</p>
+                    <a href="#" class="place-cf-under-this">回复此评论-10</a>
+                  </li>
+                      <li>
+                    <cite><a rel="external nofollow" href="http://net2e.com">lot</a></cite> 说:
+                      <small class="commentmetadata"><a title="" href="#comment-22">12月 30th, 2007 at 4:49 pm</a>   <a title="编辑评论" href="http://localhost/blog/wp-admin/comment.php?action=editcomment&c=22">edit</a></small>
+                    <p>评论测试。加油！加油！</p>
+                    <a href="#" class="place-cf-under-this">回复此评论-10</a>
+                  </li>
+                      <li>
+                    <cite><a rel="external nofollow" href="http://net2e.com">lot</a></cite> 说:
+                      <small class="commentmetadata"><a title="" href="#comment-22">12月 30th, 2007 at 4:49 pm</a>   <a title="编辑评论" href="http://localhost/blog/wp-admin/comment.php?action=editcomment&c=22">edit</a></small>
+                    <p>评论测试。加油！加油！</p>
+                    <a href="#" class="place-cf-under-this">回复此评论-10</a>
+                  </li>
+                      <li>
+                    <cite><a rel="external nofollow" href="http://net2e.com">lot</a></cite> 说:
+                      <small class="commentmetadata"><a title="" href="#comment-22">12月 30th, 2007 at 4:49 pm</a>   <a title="编辑评论" href="http://localhost/blog/wp-admin/comment.php?action=editcomment&c=22">edit</a></small>
+                    <p>评论测试。加油！加油！</p>
+                    <a href="#" class="place-cf-under-this">回复此评论-10</a>
+                  </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+
+
+
+function ty_comment( & $comment2) {
+    global $comment, $post;
+    $comment = $comment2;
+    $comment_ID = apply_filters('get_comment_ID', $comment->comment_ID);
+    $comment_author_url = ty_comment_author_link($comment);
+
+    $dd = 'F jS, Y';
+    $dt = 'H:i:s';
+    if ( '' == $dd )
+        $dd = get_option('date_format');
+    if ( '' == $dt )
+        $dt =get_option('time_format');
+    $gmt = false;
+
+    $date = $gmt? $comment->comment_date_gmt : $comment->comment_date;
+    $comment_date = apply_filters('get_comment_date', mysql2date($dd, $date), $dd);
+    $comment_time = apply_filters('get_comment_time', mysql2date($dt, $date), $dt, $gmt);
+    $comment_content = apply_filters('comment_text', apply_filters('get_comment_text', $comment->comment_content) );
+
+
+    $out = "<li id='comment-$comment_ID'>";
+    $out .= "<cite>{$comment_author_url}</cite> 说:";
+
+    if ($comment->comment_approved == '0')
+        $out .= "<em>您的评论已经发表成功，但还要在“广告别烦我”系统甄别后才会公开显示。</em>";
+    $edit_link = edit_comment_link('edit','&nbsp;&nbsp;','');
+    $out .= <<< END
+      <small class="commentmetadata">
+        <a href="#comment-$comment_ID">$comment_date at $comment_time</a> $edit_link</small>
+END;
+    $out .= get_comment_ID();
+    $out .= "<p>$comment_ID $post->ID{$comment_content}</p>";
+ob_start();
+?>
+      <cite><?php comment_author_link() ?></cite> 说:
+      <?php if ($comment->comment_approved == '0') : ?>
+      <em>您的评论已经发表成功，但还要在“广告别烦我”系统甄别后才会公开显示。</em>
+      <?php endif; ?>
+      <br />
+
+      <small class="commentmetadata"><a href="#comment-<?php comment_ID() ?>" title=""><?php comment_date('F jS, Y') ?> at <?php comment_time() ?></a> <?php edit_comment_link('edit','&nbsp;&nbsp;',''); ?></small>
+
+      <?php comment_text() ?>
+      <a class="place-cf-under-this" href="#" id="cf-placeholder-<?php comment_ID() ?>">回复此评论-<?php echo $comment->comment_parent; ?></a>
+
+<?php
+$imageData = ob_get_contents();
+ob_clean();
+
+    $out .= '<cite>' . comment_author_link() . '</cite> 说:'
+    . ($comment->comment_approved == '0') ?
+      '<em>您的评论已经发表成功，但还要在“广告别烦我”系统甄别后才会公开显示。</em>' : ''
+    . '<small class="commentmetadata"><a href="#comment-' . comment_ID() . '">'
+    . comment_date('F jS, Y') . ' at ' . comment_time() . '</a> '
+    . edit_comment_link('edit','&nbsp;&nbsp;','') . '</small>'
+    . comment_text()
+    . '<a class="place-cf-under-this" href="#" id="cf-placeholder-' . comment_ID() . '">回复此评论-' . 'echo $comment->comment_parent;' . '</a>'
+
+    return $out;
+}
+?>
